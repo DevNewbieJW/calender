@@ -21,7 +21,7 @@ let mainWindow = null;
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
     title: "Berry",
-    titleBarStyle: "hiddenInset",
+    titleBarStyle: "customButtonsOnHover",
     show: false,
     webPreferences: {
       preload: join(__dirname, "../../preload/dist/index.cjs"),
@@ -32,6 +32,7 @@ const createWindow = async () => {
     width: 1366,
     height: 800,
     movable: true,
+    backgroundColor: "#1F2937",
   });
 
   mainWindow.on("ready-to-show", () => {
@@ -48,7 +49,10 @@ const createWindow = async () => {
   const pageUrl =
     env.MODE === "development"
       ? env.VITE_DEV_SERVER_URL
-      : new URL("../renderer/dist/index.html", "file://" + __dirname).toString();
+      : new URL(
+          "../renderer/dist/index.html",
+          "file://" + __dirname
+        ).toString();
 
   await mainWindow.loadURL(pageUrl);
 };
