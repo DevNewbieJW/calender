@@ -11,9 +11,9 @@ const Day = ({ dayInMonth }) => {
       to={dayInMonth.date}
       className={`${
         dayInMonth.date === today && dayInMonth.month === currentMonth
-          ? "bg-gray-800 rounded-xl"
-          : "bg-gray-600"
-      }  flex flex-col justify-center items-center p-4 w-[15.8%] hover:bg-gray-800 hover:rounded-xl hover:scale-[1.15] hover:cursor-pointer`}
+          ? "bg-slate-800 rounded-xl"
+          : "bg-slate-600"
+      } flex w-24 p-6 flex-col items-center hover:bg-slate-800 hover:rounded-xl hover:scale-[1.15] hover:cursor-pointer`}
     >
       <div className="text-4xl">{dayInMonth.date}</div>
       <div className="text-2xl">{dayInMonth.weekday}</div>

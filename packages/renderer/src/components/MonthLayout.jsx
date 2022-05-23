@@ -36,28 +36,30 @@ const MonthSelector = () => {
 
   return (
     <React.Fragment>
-      <div className="h-full w-2/6 p-2 rounded-2xl flex flex-col">
-        <div className="w-full flex flex-row justify-between items-center pb-6">
-          <ArrowCircleLeftIcon
-            className="cursor-pointer"
-            width={35}
-            onClick={() => goPreviousMonth()}
-          />
-          <span className="text-center w-full font-bold text-4xl">
-            {currentYear}, {selectedMonth}.
-          </span>
-          <ArrowCircleRightIcon
-            className="cursor-pointer"
-            width={35}
-            onClick={() => goNextMonth()}
-          />
+      <div className="flex items-center justify-center w-full mb-4">
+        <div className="flex h-6 w-auto items-center justify-between gap-2 rounded border-2 px-2">
+          <Link to={`/${currentMonth}/${today}`}>Day</Link>
+          <div>Week</div>
+          <Link to={`/${month}`}>Month</Link>
+          <div>Year</div>
         </div>
-        <div className="w-full text-center -mb-2 text-sm flex justify-center items-center">
-          <div className="border-2 rounded bg-slate-500 w-1/4 flex flex-col justify-center items-center">
-            <div className="flex flex-row justify-between items-center w-full px-2">
-              <Link to={`/${currentMonth}/${today}`}>Day</Link>
-              <Link to={`/${month}`}>Month</Link>
+      </div>
+      <div className="flex w-3/4 items-center justify-center">
+        <div className="flex h-full w-1/3 flex-col items-center justify-center space-y-2">
+          <div className="flex w-full items-center justify-between">
+            <ArrowCircleLeftIcon
+              className="cursor-pointer"
+              width={35}
+              onClick={() => goPreviousMonth()}
+            />
+            <div className="text-4xl font-bold">
+              {currentYear}, {selectedMonth}.
             </div>
+            <ArrowCircleRightIcon
+              className="cursor-pointer"
+              width={35}
+              onClick={() => goNextMonth()}
+            />
           </div>
         </div>
       </div>

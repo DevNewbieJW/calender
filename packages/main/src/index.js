@@ -32,7 +32,6 @@ const createWindow = async () => {
     width: 1366,
     height: 800,
     movable: true,
-    backgroundColor: "#1F2937",
   });
 
   mainWindow.on("ready-to-show", () => {

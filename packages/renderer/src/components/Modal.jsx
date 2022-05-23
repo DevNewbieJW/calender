@@ -35,7 +35,7 @@ const Modal = ({ handleClose, children }) => {
   return (
     <Backdrop clicked={handleClose}>
       <motion.div
-        className="w-4/6 h-3/4 m-auto border-2 border-white bg-slate-700 rounded"
+        className="w-2/6 h-3/4 m-auto border-2 border-white bg-slate-700 rounded"
         onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"

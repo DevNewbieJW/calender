@@ -1,7 +1,7 @@
 import React from "react";
 
 const DayEvents = () => (
-  <div className="flex flex-row flex-wrap bg-gray-600 rounded-2xl p-4 w-2/6 space-y-3">
+  <div className="flex flex-row flex-wrap bg-slate-600 rounded-2xl p-4 w-2/6 space-y-3">
     {[
       {
         name: "Geburtstag Schelle",
